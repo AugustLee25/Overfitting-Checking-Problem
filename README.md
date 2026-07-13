@@ -5,9 +5,9 @@ Dự án nhỏ này cung cấp một mã nguồn Python trực quan để minh h
 1. Bối cảnh (Context):Giả sử bạn đang làm việc tại một phòng thí nghiệm vật lý. Bạn có một cảm biến để đo lường một hiện tượng dao động có tính chu kỳ (ví dụ: sóng âm, điện áp xoay chiều). Theo lý thuyết, tín hiệu chuẩn của hiện tượng này tuân theo một hàm sóng hình sin hoàn hảo: $y = \sin(2\pi x)$.Tuy nhiên, do thiết bị đo đạc của bạn là loại rẻ tiền, môi trường lại có nhiều tạp âm, nên các giá trị ghi nhận được thực tế luôn bị sai lệch một chút (bị nhiễu). Nhiệm vụ của bạn là sử dụng Machine Learning để "học" và khôi phục lại đường cong lý thuyết ban đầu chỉ dựa trên các điểm dữ liệu bị nhiễu đó.
 2. Dữ liệu (Data):Biến đầu vào ($X$): Thời gian đo đạc (điều chuẩn trong khoảng từ 0 đến 1).Biến đầu ra ($y$): Giá trị tín hiệu thu được từ cảm biến. Phương trình tạo dữ liệu thực tế: $y = \sin(2\pi X) + \epsilon$ (với $\epsilon$ là nhiễu ngẫu nhiên phân phối chuẩn).Hãy sinh ra 2 tập dữ liệu:Tập huấn luyện (Train set): Gồm 15 điểm đo đạc ngẫu nhiên.Tập kiểm thử (Test set): Gồm 15 điểm đo đạc ngẫu nhiên mới hoàn toàn, độc lập với tập Train.
 3. Yêu cầu mô hình hóa (Modeling Requirements):Sử dụng thuật toán Hồi quy đa thức (Polynomial Regression). Hãy xây dựng và huấn luyện 3 mô hình dự đoán khác nhau trên tập Train, với độ phức tạp lần lượt là:  
-   \\1 Mô hình A: Đa thức bậc 1 (Đường thẳng)  
-   \\2 Mô hình B: Đa thức bậc 3 (Đường cong cơ bản)  
-   \\3 Mô hình C: Đa thức bậc 15 (Đường cong phức tạp)  
+    Mô hình A: Đa thức bậc 1 (Đường thẳng)  
+    Mô hình B: Đa thức bậc 3 (Đường cong cơ bản)  
+    Mô hình C: Đa thức bậc 15 (Đường cong phức tạp)  
 
 Thông qua thuật toán Hồi quy đa thức (Polynomial Regression) và thư viện Scikit-Learn, dự án mô phỏng việc khôi phục một hàm sóng hình sin từ các điểm dữ liệu bị nhiễu.
 
