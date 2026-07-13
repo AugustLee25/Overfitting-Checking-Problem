@@ -1,4 +1,3 @@
-Markdown
 # Mô phỏng Overfitting và Underfitting trong Machine Learning 🚀
 
 Dự án nhỏ này cung cấp một mã nguồn Python trực quan để minh họa 3 trạng thái cơ bản khi huấn luyện một mô hình Machine Learning: **Underfitting** (Chưa khớp), **Good Fit** (Vừa vặn) và **Overfitting** (Quá khớp). 
@@ -20,16 +19,19 @@ Thông qua thuật toán Hồi quy đa thức (Polynomial Regression) và thư v
 Sử dụng lệnh sau để cài đặt các thư viện cần thiết:
 ```bash
 pip install numpy matplotlib scikit-learn
+```
 🚀 Hướng dẫn sử dụng
 Clone repository này về máy:
-
+```
 Bash
 git clone [https://github.com/](https://github.com/)<tên-người-dùng-của-bạn>/<tên-repo>.git
 cd <tên-repo>
+```
 Chạy file mã nguồn chính:
 
-Bash
+``` Bash
 python demo_overfitting.py
+```
 Xem kết quả:
 Sau khi chạy thành công, script sẽ tự động tạo ra một file ảnh tên là result_plot.png ngay trong thư mục chứa code. Mở file ảnh này để xem biểu đồ so sánh 3 trạng thái của mô hình.
 
