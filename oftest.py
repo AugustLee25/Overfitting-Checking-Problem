@@ -19,17 +19,17 @@ def run_simulation():
     X_true = np.linspace(0, 1, 100).reshape(-1, 1)
     y_true = np.sin(2 * np.pi * X_true)
     
-    # Tập huấn luyện (Train set) - 15 điểm đo đạc có kèm nhiễu ngẫu nhiên
-    X_train = np.sort(np.random.rand(15)).reshape(-1, 1)
-    y_train = np.sin(2 * np.pi * X_train) + np.random.randn(15).reshape(-1, 1) * 0.2
+    # Tập huấn luyện (Train set) - 50 điểm đo đạc có kèm nhiễu ngẫu nhiên
+    X_train = np.sort(np.random.rand(50)).reshape(-1, 1)
+    y_train = np.sin(2 * np.pi * X_train) + np.random.randn(50).reshape(-1, 1) * 0.2
     
-    # Tập kiểm thử (Test set) - 15 điểm mới hoàn toàn để đánh giá khách quan
-    X_test = np.sort(np.random.rand(15)).reshape(-1, 1)
-    y_test = np.sin(2 * np.pi * X_test) + np.random.randn(15).reshape(-1, 1) * 0.2
+    # Tập kiểm thử (Test set) - 50 điểm mới hoàn toàn để đánh giá khách quan
+    X_test = np.sort(np.random.rand(50)).reshape(-1, 1)
+    y_test = np.sin(2 * np.pi * X_test) + np.random.randn(50).reshape(-1, 1) * 0.2
     
     # 2. Xây dựng 3 mô hình tương ứng với 3 trạng thái
-    degrees = [1, 3, 15]
-    titles = ['Underfitting (Bậc 1)', 'Good Fit (Bậc 3)', 'Overfitting (Bậc 15)']
+    degrees = [1, 5, 100]  # Bậc 1: Underfitting, Bậc 3: Good Fit, Bậc 100: Overfitting    
+    titles = ['Underfitting (Bậc 1)', 'Good Fit (Bậc 3)', 'Overfitting (Bậc 100)']
     
     plt.figure(figsize=(15, 5))
     
